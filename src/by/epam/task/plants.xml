@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plants>
+    <trees>
+        <tree name="Тополь" minHeight="30" maxHeight="40" amount="6"/>
+        <tree name="Сосна" minHeight="35" maxHeight="50" amount="8"/>
+        <tree name="Ясень" minHeight="20" maxHeight="30" amount="4"/>
+        <tree name="Береза" minHeight="15" maxHeight="35" amount="5"/>
+        <tree name="Клен" minHeight="10" maxHeight="30" amount="8"/>
+    </trees>
+    <bushes>
+        <tree name="Сирень" minHeight="2" maxHeight="8" amount="10"/>
+        <tree name="Шиповник" minHeight="1" maxHeight="4" amount="12"/>
+        <tree name="Акация" minHeight="3" maxHeight="6" amount="14"/>
+    </bushes>
+</plants>
