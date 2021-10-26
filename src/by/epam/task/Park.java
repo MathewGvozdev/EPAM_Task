@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Park {
 
+    private static final List<Plant> PLANT_LIST = new ArrayList<>();
     private final PlantFactory plantFactory;
-    private static final List<Plant> park = new ArrayList<>();
     private static Park instance;
 
     private Park(PlantFactory plantFactory) {
@@ -21,7 +21,7 @@ public class Park {
     }
 
     public List<Plant> getListOfParkPlants() {
-        return park;
+        return PLANT_LIST;
     }
 
     public PlantFactory getPlantFactory() {

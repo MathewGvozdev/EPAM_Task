@@ -14,16 +14,16 @@ import java.io.File;
 public class XMLWriter {
 
     private static final File OUTPUT_FILE = new File("D:/IDEA/EPAM_Task/src/by/epam/task/xmlfiles/info.xml");
+    private static final Park INSTANCE = Park.getInstance(new PlantFactory());
 
     public static void writeXML() throws ParserConfigurationException, TransformerException {
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = builderFactory.newDocumentBuilder();
         Document document = builder.newDocument();
-        Park instance = Park.getInstance(new PlantFactory());
 
         Element root = document.createElement("Park");
-        root.setAttribute("amount", XMLReader.countAmountOfPlants(instance));
-        root.setAttribute("totalHeight", XMLReader.countTotalHeight(instance));
+        root.setAttribute("totalHeight", XMLReader.countTotalHeight(INSTANCE));
+        root.setAttribute("totalPlants", XMLReader.countAmountOfPlants(INSTANCE));
         document.appendChild(root);
 
         TransformerFactory transformerFactory = TransformerFactory.newInstance();

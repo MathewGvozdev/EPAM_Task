@@ -15,9 +15,9 @@ import java.util.Random;
 public class XMLReader {
 
     private static final File INPUT_FILE = new File("D:/IDEA/EPAM_Task/src/by/epam/task/xmlfiles/plants.xml");
-    private static final String TREE = "tree";
-    private static final String BUSH = "bush";
-    private static final Park park = Park.getInstance(new PlantFactory());
+    private static final String TREE = "Tree";
+    private static final String BUSH = "Bush";
+    private static final Park INSTANCE = Park.getInstance(new PlantFactory());
 
     public static void readXML() throws ParserConfigurationException, IOException, SAXException {
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -42,12 +42,12 @@ public class XMLReader {
             for (int counter = 0; counter < amount; counter++) {
                 int height = defineRange(minHeight, maxHeight);
                 if (plantType.equals(TREE)) {
-                    Plant plant = park.getPlantFactory().growPlant(PlantType.TREE, plantName, height);
-                    park.getListOfParkPlants().add(plant);
+                    Plant plant = INSTANCE.getPlantFactory().growPlant(PlantType.TREE, plantName, height);
+                    INSTANCE.getListOfParkPlants().add(plant);
                 }
                 if (plantType.equals(BUSH)) {
-                    Plant plant = park.getPlantFactory().growPlant(PlantType.BUSH, plantName, height);
-                    park.getListOfParkPlants().add(plant);
+                    Plant plant = INSTANCE.getPlantFactory().growPlant(PlantType.BUSH, plantName, height);
+                    INSTANCE.getListOfParkPlants().add(plant);
                 }
             }
         }
@@ -59,8 +59,8 @@ public class XMLReader {
     }
 
     public static void printResults() {
-        countAmountOfPlants(park);
-        countTotalHeight(park);
+        countAmountOfPlants(INSTANCE);
+        countTotalHeight(INSTANCE);
     }
 
     public static String countTotalHeight(Park park) {
