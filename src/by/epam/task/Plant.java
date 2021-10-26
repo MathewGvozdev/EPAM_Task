@@ -1,11 +1,11 @@
 package by.epam.task;
 
-public abstract class ParkPlant {
+public abstract class Plant {
 
-    private String name;
-    private int height;
+    private final String name;
+    private final int height;
 
-    public ParkPlant(String name, int height) {
+    public Plant(String name, int height) {
         this.name = name;
         this.height = height;
     }

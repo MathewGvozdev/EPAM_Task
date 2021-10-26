@@ -8,8 +8,8 @@
         <tree name="Клен" minHeight="10" maxHeight="30" amount="8"/>
     </trees>
     <bushes>
-        <tree name="Сирень" minHeight="2" maxHeight="8" amount="10"/>
-        <tree name="Шиповник" minHeight="1" maxHeight="4" amount="12"/>
-        <tree name="Акация" minHeight="3" maxHeight="6" amount="14"/>
+        <bush name="Сирень" minHeight="2" maxHeight="8" amount="10"/>
+        <bush name="Шиповник" minHeight="1" maxHeight="4" amount="12"/>
+        <bush name="Акация" minHeight="3" maxHeight="6" amount="14"/>
     </bushes>
 </plants>

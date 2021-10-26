@@ -1,6 +1,6 @@
 package by.epam.task;
 
-public class Tree extends ParkPlant {
+public class Tree extends Plant {
 
     public Tree(String name, int height) {
         super(name, height);
