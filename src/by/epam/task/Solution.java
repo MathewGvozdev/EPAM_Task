@@ -12,7 +12,6 @@ public class Solution {
             SAXException, TransformerException {
 
         XMLReader.readXML();
-        XMLReader.printResults();
         XMLWriter.writeXML();
     }
 }

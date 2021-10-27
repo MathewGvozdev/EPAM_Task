@@ -58,11 +58,6 @@ public class XMLReader {
         return minHeight + range.nextInt(maxHeight - minHeight);
     }
 
-    public static void printResults() {
-        countAmountOfPlants(INSTANCE);
-        countTotalHeight(INSTANCE);
-    }
-
     public static String countTotalHeight(Park park) {
         int totalHeight = 0;
         for (Plant plant : park.getListOfParkPlants()) {
